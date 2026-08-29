@@ -10,17 +10,10 @@ echo ====================================================
 :: Remove o executável antigo se ele existir para garantir uma build limpa
 if exist programa.exe del programa.exe
 
-:: Comando de compilação usando o g++ (MinGW)
-g++ src/main.cpp dependencies/GLAD/src/glad.c ^
-    -o programa.exe ^
-    -I dependencies/GLFW/include ^
-    -I dependencies/GLAD/include ^
-    -L dependencies/GLFW/lib ^
-    -lglfw3 ^
-    -lopengl32 ^
-    -lgdi32
+:: Comando de compilação usando o gcc (MinGW)
+gcc main.c src/glad.c -I include -L lib -lglfw3 -lopengl32 -lglu32 -lgdi32 -o programa.exe
 
-:: Verifica se o g++ gerou o arquivo com sucesso
+:: Verifica se o gcc gerou o arquivo com sucesso
 if %ERRORLEVEL% EQU 0 (
     echo.
     echo ✅ Compilação concluída com sucesso!

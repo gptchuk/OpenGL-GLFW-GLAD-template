@@ -13,11 +13,10 @@ https://www.glfw.org/download.html
 
 Recomenda-se o download do pré-compilado para seu sistema operacional.
 Após o download, extraia os arquivos do .zip
-copie as pastas:
+copie os arquivos nas pastas:
     'include' e
     'lib-*'  apenas a relativa ao compilador de c/c++ que usa (ex.: lib-mingw-w64)
-e cole-as na pasta 'dependencies/GLFW'
-Janela, teclado, mouse, eventos e criação do contexto OpenGL
+e cole-as respectivammente nas pastas 'include' e 'lib'.
 
 ## GLAD download
 > carregador das funções OpenGL disponíveis no driver
@@ -27,13 +26,14 @@ Escolha as opções de download compatíveis com a versão do seu openGL
 Se a sua GPU foi lançada após 2012 e está com os drivers atualizados,
 a versão do OpenGL da sua márquina é, provavelmente, OpenGL 4.6 .
 
-Após o download, realize a extração e copie as pastas 'include' e 'src' e cole-as na pasta 'dependencies/GLAD'
+Após o download, realize a extração e copie a pasta 'src' para a raiz do projeto e copie os arquivos de 'include' para a pasta 'include' já existente do projeto.
+
+## Main C/C++
+'main.c'/'main.cpp'
+Note que no template há dois arquivos de exemplo, um em C e um em C++
 
 ## Script Run
-Junto do template, há também um script para compilação e execução do programa em ambiente windows.
-Para executar no terminal, basta se certificar de que está no diretório principal do projeto e dar o comando './run'
-
-## Main.cpp
-'scr/main.cpp'
-o Arquivo principal do projeto.
-Neste template, contém um script para verificar a versão do OpenGL.
+> Commpilação e execução
+'run-c.bat'/'run-cpp.bat'
+Junto do template, há também scrips para compilação e execução do programa usando 'mingw'. um para 'C' e outro para 'C++'.
+Para executar no terminal, na raiz do projeto, basta dar o comando './run-c' ou './run-cpp' dependendo de qual linguagem escolher.
