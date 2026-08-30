@@ -11,7 +11,7 @@ echo ====================================================
 if exist programa.exe del programa.exe
 
 :: Comando de compilação usando o gcc (MinGW)
-gcc main.c src/glad.c -I include -L lib -lglfw3 -lopengl32 -lglu32 -lgdi32 -o programa.exe
+gcc main.c src/* -I include -L lib -lglfw3 -lopengl32 -lglu32 -lgdi32 -o programa.exe
 
 :: Verifica se o gcc gerou o arquivo com sucesso
 if %ERRORLEVEL% EQU 0 (
